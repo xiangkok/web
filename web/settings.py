@@ -25,7 +25,7 @@ SECRET_KEY = 'u-cu328=8^q*bcadjp(g1vm9og$o=gjz7l@h)lhf%5097wj8d2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.db.backends.mysql'
-    'SVN_Control.apps.SvnControlConfig',
+    'django.db.backends.mysql',
+    'SVN_Control',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'ch-hans'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Shanghai'
 

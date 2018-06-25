@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class TbPlat(models.Model):
     plat_name = models.CharField("平台名", max_length=40, unique=True, db_column="plat_name")
 
