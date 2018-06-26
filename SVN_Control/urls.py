@@ -9,4 +9,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('model', views.model, name='model'),
+    path('tag', views.tag, name='tag'),
+    path('platform', views.platform, name='platform'),
+    path('search', views.search, name='search')
 ]

@@ -4,6 +4,9 @@ from django.db import models
 class TbPlat(models.Model):
     plat_name = models.CharField("平台名", max_length=40, unique=True, db_column="plat_name")
 
+    def __str__(self):
+        return self.plat_name   #在后台管理页中返回指定字段内容
+
     class Meta:
         verbose_name = '平台列表'
         verbose_name_plural = verbose_name
@@ -11,6 +14,9 @@ class TbPlat(models.Model):
 
 class TbModu(models.Model):
     modu_name = models.CharField("模块名", max_length=40, unique=True, db_column="modu_name")
+
+    def __str__(self):
+        return self.modu_name   #在后台管理页中返回指定字段内容
 
     class Meta:
         verbose_name = '模块列表'
@@ -28,7 +34,7 @@ class TbModuleVersion(models.Model):
     pre_tag_path = models.CharField("当前tag路径", max_length=200)
 
     class Meta:
-        unique_together = ('pre_plat_id', 'pre_module_id',)
+        unique_together = [('pre_plat_id', 'pre_module_id',)]
         verbose_name = '模块版本表'
         verbose_name_plural = verbose_name
 

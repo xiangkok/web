@@ -20,5 +20,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('SVN_Control/', include('SVN_Control.urls'))
+    path('SVN_Control/', include('SVN_Control.urls')),
 ]
